@@ -5,7 +5,7 @@
     $newTesto = str_replace($badword, '***', $testo);
 ?>
 
-<div class="">
+<div style="background-color: cyan; color: black;">
     <h2>TESTO ORIGINALE</h2>
     <?php echo ucfirst($testo); ?>
 </div>
@@ -14,7 +14,7 @@
 <br>
 <br>
 
-<div class="">
+<div style="background-color: cyan; color: black;">
     <h2>TESTO REPLACE CHAR  <strong>'<?php echo ucfirst($badword); ?>'</strong> con <strong>***</strong></h2>
     <?php echo ucwords($newTesto); ?>
 </div>
@@ -23,14 +23,33 @@
 <br>
 <br>
 
-<div class="">
-    lUNGHEZZA TESTO : <?php echo strlen($testo) ?>
+<div style="background-color: cyan; color: black;">
+    LUNGHEZZA TESTO : <?php echo strlen($testo) ?>
+</div>
+
+<br>
+<br><br>
+
+<div style="background-color: cyan; color: black;">
+    BADWORD : <?php  echo  ucfirst($badword) ?>
 </div>
 
 <br>
 <br>
 <br>
 
-<div class="">
-    BADWORD : <?php  echo  ucfirst($badword) ?>
+<div style="background-color: cyan; color: black;">
+    <h2>STRINGA NEW LINE</h2>
+    <p> <?php  echo str_replace(',', '<br>', $testo);  ?></p>
+
+</div>
+
+<br>
+<br>
+<br>
+
+<div style="background-color: cyan; color: black;">
+    <h2>STRINGA SPLITTATA</h2>
+    <p> <?php  var_dump( explode(',',$testo));  ?></p>
+
 </div>
